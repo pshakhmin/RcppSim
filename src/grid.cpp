@@ -15,7 +15,7 @@ double &Grid::cell_death_rate_at(int s, int i)
 
 void Grid::chek() {
   for (auto x : total_death_rate) {
-    if (isnan(x)) {
+    if (std::isnan(x)) {
       abort();
     }
   }
@@ -145,7 +145,7 @@ void Grid::Initialize_death_rates() {
       if (interaction < 0) {
         continue;
       }
-      if (isnan(interaction)) {
+      if (std::isnan(interaction)) {
         abort();
       }
       
